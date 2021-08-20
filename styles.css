@@ -1,0 +1,166 @@
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+.Card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  width: 25%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  height: auto;
+}
+.CardHolder {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.food-name {
+  color: #333;
+  font-weight: 500;
+}
+.food-image {
+  width: 80%;
+}
+.food-description {
+  color: #333;
+  text-align: justify;
+}
+.food-price {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(235, 23, 23);
+}
+.order-button {
+  font-size: 1.4rem;
+  font-weight: 500;
+  background: rgb(7, 165, 7);
+  color: rgb(243, 240, 240);
+  padding: 1rem 2.5rem;
+  margin: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+  border-radius: 1.5rem;
+}
+.order-button:hover {
+  background: rgba(7, 165, 7, 0.945);
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+.loader {
+  color: #ffffff;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 55px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: "";
+}
+.loader:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: #0dc5c1;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.1em 5.1em;
+  transform-origin: 5.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+.loader:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: #0dc5c1;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 4.9em;
+  -webkit-transform-origin: 0.1em 5.1em;
+  transform-origin: 0.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.Modal {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  background-color: white;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 100;
+}
+.Modal-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(100, 100, 111, 0.2);
+  z-index: 10;
+}
+.filter-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.6rem;
+  color: #333;
+}
+.filter-box label{
+  margin: 1.5rem;
+}
+.filter-box select{
+  font-size: 1.4rem;
+  
+}
